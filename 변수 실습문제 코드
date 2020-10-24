@@ -1,0 +1,104 @@
+	    Scanner scan = new Scanner(System.in);
+		 
+
+		//1번 
+	    // 문제: 이름, 성별, 나이, 키를 사용자에게 입력 받아 각각의 값을 변수에 담고 출력하세요.
+		System.out.print("이름을 입력하세요 : ");
+		String name = scan.next();
+		System.out.print("성별을 입력하세요(남/여) : ");
+		String sex = scan.next();
+		System.out.print("나이를 입력하세요 : ");
+		int age = scan.nextInt();
+		System.out.print("키를 입력하세요(cm) : ");
+		double height = scan.nextDouble();
+		System.out.println("키 "+height+"cm인 "+age+"살 "+sex+"자 "+name+"님 반갑습니다 ^^");
+		
+		
+		
+		//2번
+		// 문제: 키보드로 정수 두 개를 입력 받아 두 수의 합,차,곱,나누기한 몫을 출력하세요.
+		//  Scanner scan = new Scanner(System.in);
+		
+		System.out.print("첫 번째 정수: ");
+		int num1 = scan.nextInt();
+		System.out.print("두 번째 정수: ");
+		int num2 = scan.nextInt();
+		
+		System.out.println("더하기 결과: "+(num1+num2));
+		System.out.println("빼기 결과: "+(num1-num2));
+		System.out.println("곱하기 결과: "+(num1*num2));
+		System.out.println("나누기 결과: "+(num1/num2));
+		
+		
+		
+		//3번
+		// 문제: 키보드로 가로, 세로 값을 실수형으로 입력 받아 사각형의 면적과 둘레를 계산하여 출력하세요.
+		// 계산 공식) 면적: 가로*세로, 둘레:(가로+세로)*2
+		//  Scanner scan = new Scanner(System.in);
+		
+		System.out.print("가로 :");
+	    double width = scan.nextDouble();
+	    System.out.print("세로 :");
+	    double length = scan.nextDouble();
+	    System.out.print("면적 :");
+	    System.out.println(width*length);
+	    System.out.print("둘레: ");
+	    System.out.println((width+length)*2);
+	    
+	    
+	    
+	    //4번
+	    // Scanner scan = new Scanner(System.in);
+	    // 문제: 영어 문자열 값을 키보드로 입력 받아 문자에서 앞에서 세 개를 출력하세요.
+		System.out.print("문자열을 입력하세요: ");
+		String letter = scan.next();
+		System.out.println("첫 번째 문자: "+letter.charAt(0));
+		System.out.println("두 번째 문자: "+letter.charAt(1));
+		System.out.println("세 번째 문자: "+letter.charAt(2));
+		
+
+		Scanner scan = new Scanner(System.in); // Scanner라는 클래스를 이용해서 scan을 만들어준다
+		
+		실습 1번
+		
+	    System.out.print("이름을 입력하세요: ");
+		String name = scan.next(); //입력 받은 내용을 어디에 저장을 해야 사용가능 -> 변수 만들어주고 이름 지어주기
+		System.out.print("성별을 입력하세요(남/여): ");
+		//String sex = scan.next();
+		char sex = scan.next().charAt(0); //앞에 한글자 받겠다
+		System.out.print("나이를 입력하세요: ");
+		int age = scan.nextInt();
+		System.out.print("키를 입력하세요(cm): ");
+		Double height = scan.nextDouble();
+		System.out.println("키 "+height+"cm인 "+age+"살 "+sex+"자 "+name+"님 반갑습니다^^");
+		
+		
+		//실습 2번
+		System.out.print("첫 번째 정수: ");
+		int num1 = scan.nextInt();
+		System.out.print("두 번째 정수: ");
+		int num2 = scan.nextInt();
+		System.out.println("더하기 결과 :"+(num1+num2));
+		System.out.println("빼기 결과: "+(num1-num2));
+		System.out.println("곱하기 결과: "+(num1*num2));
+		System.out.println("나누기 결과: "+(num1/num2));
+		
+		
+		//실습 3번
+		System.out.print("가로: ");
+		Double num1 = scan.nextDouble();
+		System.out.print("세로: ");
+		Double num2 = scan.nextDouble();
+		System.out.println("면적: "+(num1*num2));
+		System.out.println("둘레: "+(num1+num2)*2);
+
+		
+		//실습 4번
+		
+		System.out.print("문자열을 입력하세요: ");
+		String str = scan.next();
+		System.out.println("첫 번째 문자:" + str.charAt(0));
+		System.out.println("두 번째 문자:" + str.charAt(1));
+		System.out.println("세 번째 문자:" + str.charAt(2));
+		
+	
