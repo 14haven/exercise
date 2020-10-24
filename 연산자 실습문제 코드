@@ -1,0 +1,237 @@
+// 1번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("정수: ");
+
+ int num = scan.nextInt();
+
+ System.out.println((num>0) ? "양수다" :"양수가 아니다" );
+
+
+
+
+
+// 2번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("정수: ");
+
+ int num2 = scan.nextInt();
+
+ System.out.println((num2>0)? "양수다" : (num2==0)? "0이다" : "음수다");
+
+
+
+
+
+//3번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("정수: ");
+
+ int num3 = scan.nextInt();
+
+ System.out.println((num3%2==0)? "짝수다" : "홀수다");
+
+
+
+
+
+//4번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("인원 수: ");
+
+ int people = scan.nextInt();
+
+ System.out.print("사탕 개수: ");
+
+ int candy = scan.nextInt();
+
+ System.out.println("1인당 사탕 개수: "+(candy/people));
+
+System.out.println("남는 사탕 개수: "+(candy%people));
+
+
+
+//5번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("이름: ");
+
+ String name = scan.next();
+
+ System.out.print("학년(숫자만): ");
+
+ int year = scan.nextInt();
+
+ System.out.print("반(숫자만): ");
+
+ int num4 = scan.nextInt();
+
+ System.out.print("번호(숫자만): ");
+
+ int num5 = scan.nextInt();
+
+ System.out.print("성별(M/F): ");
+
+ char sex = scan.next().charAt(0);
+
+ System.out.print("성적(소수점 아래 둘째자리까지): ");
+
+ double grade = scan.nextDouble();
+
+
+
+ System.out.println(year+"학년 "+num4+"반 "+num5+"번 "+name+" "+((sex=="M")? "남학생" : "여학생")+"의 성적은 "+grade+"이다.");
+
+
+
+
+
+// 6번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("나이: ");
+
+ int age = scan.nextInt();
+
+ System.out.print((age>19)? "성인" : ((age<=13)? "어린이":"청소년"));
+
+
+
+
+
+//7번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("국어: ");
+
+ int kor = scan.nextInt();
+
+ System.out.print("영어: ");
+
+ int eng = scan.nextInt();
+
+ System.out.print("수학: ");
+
+ int math = scan.nextInt();
+
+
+
+ int total = kor+eng+math;
+
+
+
+ System.out.println("합계: "+total);
+
+ System.out.println("평균: "+(total/3.0));
+
+ System.out.println(((kor>=40&&eng>=40&&math>=40)&&((total/3.0)>=60))? "합격" : "불합격");
+
+
+
+
+
+//8번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("주민번호를 입력하세요(-포함): ");
+
+ String num6 = scan.next();
+
+ System.out.println((num6.charAt(7)=="2")? "여자" :"남자");
+
+
+
+
+
+//9번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("정수1: ");
+
+ int num1 = scan.nextInt();
+
+ System.out.print("정수2: ");
+
+ int num2 = scan.nextInt();
+
+ System.out.print("입력: ");
+
+ int num3 = scan.nextInt();
+
+ System.out.println((((num1<num2)&&(num3<=num1))||(num2<num3))? "true":"false");
+
+
+
+
+
+//10번
+
+ Scanner scan = new Scanner(System.in);
+
+ System.out.print("입력1: ");
+
+ int num1 = scan.nextInt();
+
+ System.out.print("입력2: ");
+
+ int num2 = scan.nextInt();
+
+ System.out.print("입력3: ");
+
+ int num3 = scan.nextInt();
+
+ System.out.println((num1==num2)? ((num2==num3)? "true":"false") : "false");
+
+
+
+
+
+
+//11번
+
+ Scanner scan = new Scanner(System.in);/ System.out.print("A사원의 연봉: ");
+
+ int numa = scan.nextInt();
+
+ System.out.print("B사원의 연봉: ");
+
+ int numb = scan.nextInt();
+
+ System.out.print("C사원의 연봉: ");
+
+ int numc = scan.nextInt();
+
+
+
+ double numa1 = numa*1.4;
+
+ double numb1 = numb;
+
+ double numc1 = numc*1.15;
+
+
+
+  System.out.println("A사원 연봉/연봉+a: "+numa+"/"+numa1);
+
+ System.out.println((numa1>=3000)? "3000 이상":"3000 미만");
+
+ System.out.println("B사원 연봉/연봉+a: "+numb+"/"+numb1);
+
+ System.out.println((numb1>=3000)? "3000 이상":"3000 미만");
+
+ System.out.println("C사원 연봉/연봉+a: "+numc+"/"+numc1);
+
+ System.out.println((numc1>=3000)? "3000 이상":"3000 미만");
+
