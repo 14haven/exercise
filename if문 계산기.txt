@@ -1,0 +1,54 @@
+if문 계산기
+
+-. 계산기 만들기(if문 사용)
+﻿===============출력===============
+
+##계산기##
+1. 더하기
+2. 빼기
+3. 나누기
+4. 곱하기
+선택 :
+
+
+고려해야 할 점:
+1. 옵션 1~4만 선택할 수 있도록 => 5번 누르면 잘못된 선택입니다.
+2. 0으로 못나누게
+3. 나누었을 때 실수로 나오도록 형변환
+
+
+
+public class Calc {
+	public static void main(String [] args) {
+		//계산기 만들기(if)
+		Scanner scan = new Scanner(System.in);
+		System.out.println("## 계산기 ##");
+		System.out.println("1.더하기");
+		System.out.println("2.빼기");
+		System.out.println("3.나누기");
+		System.out.println("4.곱하기");
+		System.out.print("선택 : ");
+		int select = scan.nextInt();
+		if(select > 0 && select < 5) {
+			System.out.print("숫자 1 입력 : ");
+			int num1 = scan.nextInt();
+			System.out.print("숫자 2 입력 : ");
+			int num2 = scan.nextInt();
+			if(select == 1) {
+				System.out.println("결과 : "+(num1 + num2));
+			}else if(select == 2) {
+				System.out.println("결과 : "+(num1 - num2));
+			}else if(select == 3) {
+				if(num2 == 0) {
+					System.out.println("0으로 나눌 수 없습니다~!");
+				}else {
+					System.out.println("결과 : "+((double)num1 / num2));				
+				}				
+			}else if(select == 4) {
+				System.out.println("결과 : "+(num1 * num2));
+			}
+		}else {
+			System.out.println("잘못된 선택입니다.");
+		}
+	}
+}

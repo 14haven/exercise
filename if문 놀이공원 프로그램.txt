@@ -1,0 +1,48 @@
+if문 
+
+-. 놀이공원 프로그램 만들기
+
+===============출력===============
+
+##놀이 공원 프로그램##
+입장 하실 인원은 총 몇 명 입니까? 3
+어른은 몇 명 입니까? (인원당 1만5천원) 1
+아이는 몇 명 입니까? (인원당 5천원) 2
+지불하실 총 금액은 25000원 입니다
+
+
+
+고려해야 할 점:
+1. 총입장 인원을 0명으로 적거나 음수로 적을 때
+2. 어른이 총입장 인원보다 많을 때
+3. 어른을 음수로 적지 않도록
+4. 어른이 총입장 인원과 같을때 바로 출력되도록
+
+
+public class park {
+
+	public static void main(String[] args) {
+		// 놀이공원 프로그램
+		Scanner scan = new Scanner(System.in);
+		int total, adult, child=0;
+		System.out.println("## 놀이공원 프로그램 ##");
+		System.out.print("입장하실 인원은 총 몇 명입니까?");
+		total = scan.nextInt();
+		if(total > 0) {
+			System.out.print("어른은 몇 명입니까?(인원당 1만5천원)");
+			adult = scan.nextInt();
+			if(total > adult) {
+				System.out.print("아이는 몇 명입니까?(인원당 5천원)");
+				child = scan.nextInt();
+			}
+			if(total == adult+child) {
+				System.out.println("지불하실 총 금액은 "+(15000*adult+5000*child)+"원 입니다.");
+			}else {
+				System.out.println("인원수가 맞지 않습니다~!");
+			}			
+		}else {
+			System.out.println("장난치지말고 집에가세요~!!");
+		}
+	}
+
+}
