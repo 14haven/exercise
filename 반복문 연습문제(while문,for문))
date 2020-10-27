@@ -1,0 +1,134 @@
+while문 사용하여 0부터 입력받은 수 까지의 합 구하기
+
+//		Scanner scan = new Scanner(System.in);
+//		int count = scan.nextInt();
+//		//5 -> 0+1+2+3+4+5 ...
+//		int i=1 ;
+//		int sum=0;
+//		while(i<=count) {
+//			sum += i;
+//			i++;
+//			
+//		}System.out.println(sum);
+
+while문을 사용하여 수를 입력 받아 0부터 입력 받은 수까지의 짝수들 합 구하기
+
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("정수 입력:");
+//		int count = scan.nextInt();
+//		
+//		// 5-> 0+2+4
+//		int i=1;
+//		int sum=0;
+//		while (i<=count) {
+//			sum += i;
+//			i+=2;
+//			
+//		} System.out.println(sum);
+//		
+	
+		
+while문 사용하여 구구단 출력하기(입력 받은 단 하나)
+		
+//		System.out.print("몇 단을 출력하시겠습니까?");
+//		Scanner scan = new Scanner(System.in);
+//		int thr = scan.nextInt();
+//		int num=1;
+//		while(num<=9) {
+//			System.out.println(thr+" x "+num+" = "+(thr*num));
+////			System.out.printf("%d x %d = %d \n", thr, i, thr*i);
+//			num++;
+//		}
+		
+
+
+
+while문 사용하여 계산기 만들기
+
+//		Scanner scan = new Scanner(System.in);
+//		
+//		while(true) {
+//		System.out.println("##계산기##");
+//		System.out.println("1.더하기");
+//		System.out.println("2.빼기");
+//		System.out.println("3.나누기");
+//		System.out.println("4.곱하기");
+//		System.out.println("5.종료");
+//		System.out.print("선택:");
+//		int select = scan.nextInt();
+//		
+//			if(select>0 && select<=4) {
+//			System.out.print("숫자1 입력:");
+//			int num1 = scan.nextInt();
+//			System.out.print("숫자2 입력:");
+//			int num2 = scan.nextInt();
+//			
+//			if(select == 1) {
+//				System.out.println("결과: "+(num1+num2));
+//			}else if(select == 2) {
+//				System.out.println("결과: "+(num1-num2));
+//			}else if(select == 3) {
+//				if (num2 ==0) {
+//					System.out.println("0으로는 나눌 수 없습니다.");
+//				}else {
+//				System.out.println("결과: "+((double)num1/num2));
+//				}
+//			}else if(select == 4) {
+//				System.out.println("결과: "+(num1*num2));
+//			
+//			}
+//				
+//		}else if(select ==5) {
+//			 break;
+//		}else {
+//			System.out.println("번호를 다시 선택하세요");
+//		}
+//		
+//		}
+
+
+
+
+for문 사용하여 구구단 출력하기(2~9단)
+		
+//		for(int firdan=2 ; firdan<10 ; firdan++) {
+//			for(int secdan=1; secdan<10 ; secdan++) {
+//				System.out.println(firdan+" x "+secdan+" = "+(firdan*secdan));
+////				System.out.printf("%d x %d = %d\n", firdan, secdan, firdan*secdan);	
+//			}
+//		}
+		 
+
+while문을 사용해서 구구단 출력하기(2~9단)
+		
+//		int i = 2;
+//		while(i<10) {
+//			int s = 1; //중첩해서 쓸 때 초기화 밖에 하면 안됨
+//			while(s<10) {
+//				System.out.printf("%d x %d = %d\n", i, s, i*s);
+//				s++;
+//			} i++;
+//		}
+		
+
+
+구구단 가로로 출력하기
+
+		for(int i=2 ; i<10 ; i++) {
+		for(int j=1; j<10 ; j++) {
+			System.out.printf("%d x %d = %2d", i, j, i*j);
+			System.out.print("  ");
+		} System.out.println("");
+	}
+		
+		
+//		for(int j=1 ; j<=9 ; j++) {
+//		for(int i=2 ; i<=9 ; i++) {
+//			
+//			System.out.printf("%d x %d = %2d", i, j, i*j  );
+//			System.out.print("   ");
+//			
+//		}System.out.println("");
+//		
+//		}
+		//고정되는 수가 밖에 있게 하기
