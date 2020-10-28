@@ -1,0 +1,91 @@
+1. 스캐너를 통해 1~100 사이의 정수를 하나 입력 받는다.
+ 1~100 사이의 정수가 아니면 "1~100 사이의 정수를 입력하세요!" 출력 후 종료.
+2. 1은 소수가 아니기 때문에 1 입력 시 "1은 소수가 아닙니다." 출력 후 종료
+3. 2~100 사이의 수 입력 시 소수인지 아닌지를 확인하여 결과 출력 후 종료
+	?? 은(는) 소수가 아닙니다.
+	?? 은(는) 소수입니다.
+
+
+	Scanner scan = new Scanner(System.in);
+	System.out.print("1~100 사이의 정수를 입력하세요: ");
+	int num = scan.nextInt();
+	
+	if (num>0 && num<101) {
+		if(num!=0) {
+		
+			for(int i=2; i<num; i++) {
+				if(num%i ==0) {
+					System.out.println(num+"은(는) 소수가 아닙니다.");
+					return;
+				} 
+			} System.out.println(num+"은(는) 소수입니다.");
+	
+	
+
+		}
+		 else {System.out.println("1은 소수가 아닙니다.");	
+		}
+	}
+	else {
+		System.out.println("1~100 사이의 정수를 입력하세요!");
+	}
+
+
+--------------------------------------------------------------------------------------
+
+	Scanner scan = new Scanner(System.in);
+	System.out.print("1~100 사이의 정수를 입력하세요: ");
+	int num = scan.nextInt();
+	boolean result = true;
+	
+	if (num>0 && num<101) {
+		if(num!=0) {
+		
+			for(int i=2; i<num; i++) { //내가 입력받은 값을 2부터시작해서 입력받은 값 직전까지 나누었을때 나뉘면 소수가아님
+				if(num%i ==0) {
+					result = false;
+				} 
+			} 
+			if(result) {	
+			System.out.println(num+"은(는) 소수입니다.");
+			} else{
+				System.out.println(num+"은(는) 소수가 아닙니다.");
+			}
+	
+
+
+		}
+		 else {System.out.println("1은 소수가 아닙니다.");	
+		}
+	}
+	else {
+		System.out.println("1~100 사이의 정수를 입력하세요!");
+	}
+
+--------------------------------------------------------------------------------------
+	Scanner scan = new Scanner(System.in);
+	System.out.print("1~100 사이의 정수를 입력하세요: ");
+	int num = scan.nextInt();
+	boolean result = true;
+	
+	
+	if(num < 1 || num > 100) {
+		System.out.println("1~100 사이의 정수를 입력하세요!");
+	} else if(num==1) {
+		System.out.println("1은 소수가 아닙니다.");
+	} else {
+		for(int i = 2; i < num; i++) {
+			if(num % i ==0) {
+				result = false;
+			}
+		}
+		if(result) {
+				System.out.println(num+"은(는) 소수 입니다.");
+				} else{
+				System.out.println(num+"은(는) 소수가 아닙니다.");
+			}
+		}
+		
+		break; //제어문 종료
+		return; //메서드 종료
+		System.exit(0); //프로그램 종료
