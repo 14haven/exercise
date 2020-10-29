@@ -1,0 +1,261 @@
+		// 1번
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("1이상의 숫자를 입력하세요 : ");
+//		int num = scan.nextInt();
+//		if(num>=1) {
+//			
+//			for(int i=1; i<=num; i++ )
+//				System.out.print(i+" ");
+//					
+//		}else {
+//			System.out.println("1 이상의 숫자를 입력해주세요.");
+//		}
+		
+	
+		// 2번
+//		Scanner scan = new Scanner(System.in);
+//		
+//	
+//		while(true) {
+//			System.out.print("1이상의 숫자를 입력하세요 : ");
+//			int num = scan.nextInt();
+//			
+//			if(num<=0) {
+//			System.out.println("1 이상의 숫자를 입력해주세요.");
+//			continue;
+//			} else if(num>=1) {
+//			
+//			for(int i=1; i<=num; i++ )
+//				System.out.print(i+" ");
+//			break;
+//			}
+//	}
+		
+		
+		// 3번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("1이상의 숫자를 입력하세요 : ");
+//		int num = scan.nextInt();
+//		if(num>=1) {
+//			
+//			for(int i=num; i>0; i-- )
+//				System.out.print(i+" ");
+//					
+//		}else {
+//			System.out.println("1 이상의 숫자를 입력해주세요.");
+//		}
+
+	
+		// 4번
+//		Scanner scan = new Scanner(System.in);
+//		while(true) {
+//		System.out.print("1이상의 숫자를 입력하세요 : ");
+//		int num = scan.nextInt();
+//		
+//		if(num>=1) {
+//			
+//			for(int i=num; i>0; i-- ) {
+//				System.out.print(i+" ");
+//			}break;
+//		}else {
+//			System.out.println("1 이상의 숫자를 입력해주세요.");
+//		}
+//	}
+		
+		
+		
+		// 5번
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("정수를 하나 입력하세요 : ");
+//		int num = scan.nextInt();
+//		int sum =0;
+//		for (int j=1; j<=num; j++) {
+//			sum += num;
+//		}
+//		for(int i=1 ; i<=num ; i++) {
+//		System.out.print(i);
+//		if(i != num) {
+//		System.out.print(" + ");
+//			}
+//		}
+//	
+//		System.out.println(" = "+sum);
+		
+		  //6번
+//			Scanner scan = new Scanner(System.in);
+//		 System.out.print("첫 번째 숫자: ");
+//	 	 int f = scan.nextInt();
+//		  System.out.print("두 번째 숫자: ");
+//		  int s = scan.nextInt();
+//		  
+//		  if(f>0 && s>0) {
+//		   if(f>=s) {
+//		    for(int i=s ; f>=s ; s++) {
+//		     System.out.print(s+" ");
+//		    }
+//		    
+//		   } else if(f<s) {
+//		    for(int j=f ; s>=j ;j++ )
+//		    System.out.print(j+" ");
+//		   }
+//		  } else {
+//		   System.out.println("1 이상의 숫자를 입력해주세요");
+//		  }
+		
+		
+		//7번
+//		Scanner scan = new Scanner(System.in);
+//
+//		while(true) {
+//			
+//		System.out.print("첫 번째 숫자: ");
+//		int f = scan.nextInt();
+//		System.out.print("두 번째 숫자: ");
+//		int s = scan.nextInt();
+//		
+//		if(f>0 && s>0) {
+//			if(f>=s) {
+//				for(int i=s ; f>=s ; s++) {
+//					System.out.print(s+" ");
+//					
+//				} break;
+//				
+//			} else if(f<s) {
+//				for(int j=f ; s>=j ;j++ )
+//				System.out.print(j+" ");
+//			} break;
+//		} else {
+//			System.out.println("1 이상의 숫자를 입력해주세요");
+//			continue;
+//		}
+//	}
+		//8번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("숫자 : ");
+//		int dan = scan.nextInt();
+//		System.out.printf("==== %d단 ====\n", dan);
+//		for(int j=1 ; j<10 ; j++) {
+//			System.out.printf("%d * %d = %d\n", dan, j, dan*j);
+//		}
+		
+		
+		//9번
+//	 Scanner scan = new Scanner(System.in);
+//	 System.out.print("숫자 : ");
+//	 int i = scan.nextInt();
+//	 if (i<10) {
+//	 for(int s = i ; s<=9 ; s++) {
+//		 System.out.printf("==== %d단 ===\n", s);
+//		 for(int k = 1; k<10 ; k++) {
+//			 System.out.printf("%d * %d = %d\n", s, k, s*k);
+//		 }
+//	 }
+//	} else {
+//		System.out.println("9 이하의 숫자만 입력해주세요.");
+//		
+//	}
+		
+		//10번
+	
+		
+//		while(true){
+//		 Scanner scan = new Scanner(System.in);
+//		 System.out.print("숫자 : ");
+//		 int i = scan.nextInt();
+//		 
+//		 if (i<10) {
+//		 for(int s = i ; s<=9 ; s++) {
+//			 System.out.printf("==== %d단 ===\n", s);
+//			 for(int k = 1; k<10 ; k++) {
+//				 System.out.printf("%d * %d = %d\n", s, k, s*k);
+//			 }
+//		 } break;
+//		} else {
+//			System.out.println("9 이하의 숫자만 입력해주세요.");
+//		  }
+//		}
+		
+		
+		//11번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("시작 숫자 : ");
+//		int s = scan.nextInt();
+//		System.out.print("공차 : ");
+//		int g = scan.nextInt();
+//		int sum=s;
+//		System.out.print(s+" ");
+//		for(int i=1; i<10 ; i++) {
+//			sum += g;
+//			System.out.print(sum+" ");
+//		} 
+		
+		
+		//12번
+		
+//		Scanner scan = new Scanner(System.in);
+//		while(true) {
+//			System.out.print("연산자(+,-,*,/,%): ");
+//			String i = scan.next();
+//			System.out.print("정수1: ");
+//			int num1 = scan.nextInt();
+//			System.out.print("정수2: ");
+//			int num2 = scan.nextInt();
+//			
+//			switch(i) {
+//			
+//			case "+": System.out.printf("%d + %d = %d\n",num1, num2, num1+num2);
+//					break;
+//			case "-": System.out.printf("%d - %d = %d\n",num1, num2, num1-num2);
+//					break;
+//			case "*": System.out.printf("%d * %d = %d\n",num1, num2, num1*num2);
+//					break;
+//			case "/":
+//				if(num2 !=0) {
+//				System.out.printf("%d / %d = %d\n",num1, num2, num1/num2);
+//					break;
+//				} else { System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+//				continue;
+//				}			
+//			case "%":
+//				if(num2 !=0) {
+//				System.out.printf("%d % %d = %d\n",num1, num2, num1%num2);
+//					break;
+//				} else { System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+//				continue;
+//				}	
+//			
+//			
+//			default : System.out.println("없는  연산자입니다. 다시 입력해주세요");
+//					 continue;
+//			}
+//		}
+		
+		//13번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("정수 입력 : ");
+//		int i = scan.nextInt();
+//		
+//		for(int j=1 ; j<=i ; j++) {
+//			for(int t=1 ; t<=j ; t++) {
+//			System.out.print("*");
+//		}System.out.println();
+//		}
+		
+		//14번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("정수 입력: ");
+//		int t = scan.nextInt();		
+//		for(int i=1; i<=t; i++) {
+//			for(int j=t; j>=i; j--) {
+//			System.out.print("*");
+//			} for(int s=1; s<t; s++) {
+//			System.out.print(" ");
+//			} System.out.println();
+//			}
+
+		
