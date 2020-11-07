@@ -1,0 +1,348 @@
+package kh.project1.test1;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class beyeolTest {
+
+	public static void main(String[] args) {
+		
+		//1번
+		
+//		int[] i = new int[10];
+//		
+//		for(int j=0; j<i.length ; j++) {
+//			i[j] =j+1;
+//		}
+//		for(int j=0 ; j<i.length; j++) {
+//			System.out.print(i[j]+" ");
+//		}
+
+		
+		//2번
+		
+//		int[]arr = new int[10];
+//		
+//		for(int i = 0 ; i<arr.length ; i++) {
+//			arr[i] = i+1;
+//		}
+//		for(int i = 9 ; i>=0 ; i--) {
+//			System.out.print(arr[i]+" ");
+//		}
+		
+		//3번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("양의 정수 : ");
+//		int i = scan.nextInt();
+//		
+//		int[] arr = new int[i];
+//		
+//		for(int j=0; j<arr.length ; j++) {
+//			arr[j] = j+1;
+//		}
+//		for(int j=0; j<arr.length ; j++) {
+//			System.out.print(arr[j]+" ");
+//		}
+		
+		//4번
+		
+//		String[] fruit = new String[5];
+//		fruit = new String[] {"사과", "귤", "포도","복숭아","참외"};
+//		System.out.println(fruit[1]);
+
+		
+		//5번
+		
+//		Scanner scan = new Scanner(System.in);
+//		System.out.print("문자열 : ");
+//		String moon = scan.next();
+//		char[] be = new char[moon.length()];
+//		for(int i=0; i<moon.length(); i++) {
+//			be[i]= moon.charAt(i);
+//		}
+//		System.out.print("문자 : ");
+//		String ch = scan.next();
+//		int sum = 0;
+//		
+//		System.out.print(moon+"에 "+ch+"가 존재하는 위치(인덱스) : ");
+//		for(int i=0; i<be.length; i++) {
+//			if(ch.charAt(0)==be[i]) {
+//				System.out.print(i+" ");
+//				sum ++;
+//			}
+//		}
+//		System.out.println();
+//		System.out.print(ch+" 개수 : "+sum);
+		
+
+
+
+			
+			
+	
+		// 6번
+		
+//		Scanner scan = new Scanner(System.in);
+//		String[] week = {"월요일","화요일","수요일","목요일","금요일","토요일","일요일"};
+//		
+//		System.out.print("0 ~ 6 사이 숫자 입력: ");
+//		int num = scan.nextInt();
+//		if(num>=0 && num<7) {
+//			System.out.println(week[num]);
+//		} else {
+//			System.out.println("잘못 입력하셨습니다.");
+//		}
+
+			
+		// 7번
+//			Scanner scan = new Scanner(System.in);
+//			System.out.print("정수 : ");
+//			int i = scan.nextInt();
+//			int[] be = new int[i];
+//			
+//			for(int j=0; j<be.length; j++) {
+//				System.out.print("배열 "+j+"번째 인덱스에 넣을 값 : ");
+//				int t = scan.nextInt();
+//				be[j] = t;
+//			}
+//			for(int j=0 ; j<be.length; j++) {
+//				System.out.print(be[j]+" ");
+//			}
+//			
+//			int sum = 0;
+//			for(int j=0; j<be.length; j++) {
+//				sum += be[j];
+//			}
+//			System.out.println();
+//			System.out.println("총 합 : "+sum);
+			
+			
+			//8번	
+//			Scanner scan = new Scanner(System.in);		
+//			while(true) {
+//			System.out.print("정수 : ");
+//			int num = scan.nextInt();
+//			
+//			if(num<3) {
+//				System.out.println("다시 입력하세요.");
+//				continue;
+//			} else if (num%2 == 0) {
+//				System.out.println("다시 입력하세요.");
+//				continue;
+//			} else {
+//				int[] be = new int[num];
+//				
+//				for(int i=0; i<(double)num/2 ; i++) {
+//					be[i]= i+1;
+//				}
+//				int t=0;
+//				for(int i=num-1; i>num/2; i--) {
+//					
+//					be[i]= 1 + t;
+//					t++;
+//				}
+//				
+//				for(int i=0; i<be.length; i++) {
+//					System.out.print(be[i]);
+//					if(i != be.length-1){
+//						System.out.print(", ");
+//					}
+//				}break;
+//			}
+//			}
+			
+			
+			
+			//9번
+//			Scanner scan = new Scanner(System.in);
+//			
+//			String[] chik = { "양념", "뿌링클", "허니콤보", "후라이드" };
+//			System.out.print("치킨 이름을 입력하세요 : ");
+//			String name = scan.next();
+//	
+//			for(int i=0; i<chik.length; i++) {
+//				if(name.equals(chik[i])) {
+//					System.out.println(chik[i]+"치킨 배달 가능");
+//					break;
+//				} else {
+//					System.out.println(name+"치킨은 없는 메뉴입니다.");
+//					break;
+//				}
+//			}
+			
+		
+		
+		
+			//10번
+//			Scanner scan = new Scanner(System.in);
+//			System.out.print("주민등록번호(-포함): ");
+//			String num = scan.next();
+//			
+//			char[] jumin = new char[14];
+//			for(int i=0; i<jumin.length; i++) {
+//				jumin[i]= num.charAt(i);
+//			}
+//			
+//			char[] boksa = new char[14];
+//			System.arraycopy(jumin, 0, boksa, 0, 8);
+//			for(int i=8; i<boksa.length; i++) {
+//				boksa[i]='*';
+//			}
+//			
+//			for(int i=0; i<boksa.length; i++) {
+//				System.out.print(boksa[i]);
+//			}
+			
+			
+			// 11번
+			
+//			int[] ten = new int[10];
+//			
+//			for(int j=0; j<ten.length; j++) {
+//				ten[j] = (int)(Math.random()*10+1);
+//			}
+//			
+//			for(int j=0; j<ten.length; j++) {
+//				System.out.print(ten[j]+" ");
+//			}
+			
+			
+			
+			// 12번
+			
+//			int[] ten = new int[10];
+//	
+//			for(int j=0 ; j<ten.length; j++) {
+//				ten[j] = (int)(Math.random()*10+1);
+//			}
+//			
+//			for(int j=0 ; j<ten.length ; j++) {
+//				System.out.print(ten[j]+" ");
+//			}
+//			int k ;
+//			for(int j=0; j<ten.length-1 ; j++) {
+//				for(int i=j+1 ; i<ten.length ; i++) {
+//					
+//					if(ten[j]>ten[i]){
+//						k = ten[j];
+//						ten[j] = ten[i];
+//						ten[i] = k;
+//					}
+//				}
+//			}
+//			System.out.println();
+//			System.out.println("최대값 : "+ten[9]);
+//			System.out.println("최소값 : "+ten[0]);
+			
+			
+			//13번
+			
+//			int [] ten = new int[10];
+//			for(int j=0; j<ten.length; j++) {
+//				ten[j] = (int)(Math.random()*10+1);
+//				
+//				for(int k=0; k<j ; k++) {
+//					if(ten[k] == ten[j]) {
+//						ten[j] = (int)(Math.random()*10+1);
+//						k=0;
+//					}
+//				}
+//			}
+//			for(int i=0; i<ten.length ; i++) {
+//			System.out.print(ten[i]+" ");
+//			}
+			
+		
+		
+		
+			//14번
+//			int[] lotto = new int[7];
+//			
+//			for(int i=0; i<lotto.length ; i++) {
+//				lotto[i] = (int)(Math.random()*45+1);
+//				
+//				for(int k=0 ; k<i ; k++) {
+//					if(lotto[k] == lotto[i]) {
+//						lotto[i] = (int)(Math.random()*45+1);
+//						k=0;
+//					}
+//				}
+//			}
+//			
+//			for(int i=0; i<lotto.length ; i++) {
+//				System.out.print(lotto[i]+" ");
+//			}
+			
+			//15번
+			
+//			Scanner scan = new Scanner(System.in);
+//			System.out.print("문자열 : ");
+//			String word = scan.next();
+//			
+//			char[] arr = new char[word.length()];
+//			for(int i = 0; i<arr.length; i++) {
+//				arr[i] = word.charAt(i);
+//				}
+//			
+//			// 배열 내용 비교해서 겹치면 공백으로 바꿔주기  
+//			for(int i=0; i<arr.length ; i++) {
+//				for(int j=i+1 ; j<arr.length ; j++) {
+//					if(arr[i] == arr[j]) {
+//						arr[j] = ' ';
+//					}
+//				}
+//			}
+//		
+//			System.out.print("문자열에 있는 문자 : ");
+//			int count =0;
+//			for(int i=0; i<arr.length; i++) {
+//				if((arr[i] != ' ')&& ( i!= arr.length-1)) {
+//					System.out.print(arr[i]+", ");
+//					count++;
+//				}
+//			}
+//			
+//			System.out.print(arr[arr.length-1]);
+//			System.out.println();
+//			System.out.println("문자 개수 : "+(count+1));
+			
+			
+			// 16번
+//			Scanner scan = new Scanner(System.in);
+//			System.out.print("배열의 크기를 입력하세요 : ");
+//			int	cnt = scan.nextInt();
+//			ArrayList<String> arr = new ArrayList<String>(); //ArrayList로 크기가 가변적인 배열 선언
+//			// 최초 배열 크기만큼 문자열 입력받고 배열 인덱스 초기화
+//			for(int i=0; i<cnt; i++) {
+//				System.out.printf("%d번째 문자열 : ",i+1);
+//				String input = scan.next();
+//				arr.add(input);
+//			}
+//			
+//			while(true) {
+//				System.out.print("더 값을 입력하시겠습니까?(y/n): ");
+//				String ch = scan.next();
+//				if(ch.equals("y")) {
+//					System.out.print("더 입력하고 싶은 개수: ");
+//					int cnt2 = scan.nextInt();
+//					for(int i=0; i< cnt2 ; i++) {
+//						System.out.printf("%d번째 문자열: ", i+1+cnt);
+//						String input = scan.next();
+//						arr.add(input);
+//					}
+//					cnt += cnt2;
+//					
+//				} else if(ch.equals("n")) {
+//					for(int i=0 ; i<arr.size(); i++) {
+//						if(i<arr.size()-1) {
+//							System.out.print(arr.get(i)+", ");
+//						} else {
+//							System.out.print(arr.get(i));
+//						} 
+//					}return;
+//				}
+//			}
+			
+
+				
+			}
+}
