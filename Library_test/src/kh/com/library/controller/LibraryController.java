@@ -935,6 +935,10 @@ public class LibraryController {
 		PreparedStatement pstmt2 = null;
 		ResultSet rset = null;
 		int result = 0;
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(new java.util.Date());
+		cal.add(Calendar.DATE, 2);
+		Date d = new Date(cal.getTimeInMillis());
 		
 		try {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","STUDENT","STUDENTPASS");
@@ -950,7 +954,7 @@ public class LibraryController {
 			pstmt2.setInt(2, rset.getInt("BOOK_NO"));
 			pstmt2.setString(3, id);
 			pstmt2.setDate(4, new java.sql.Date(new java.util.Date().getTime()));
-			pstmt2.setDate(5, new java.sql.Date(new java.util.Date().getTime()+2));
+			pstmt2.setDate(5,new java.sql.Date(d.getTime()));	
 			result = pstmt2.executeUpdate();
 			if(result > 0) {
 				System.out.println("대여 정보 추가 완료");
@@ -963,9 +967,9 @@ public class LibraryController {
 			e.printStackTrace();
 		} finally {
 			try {
-				rset.close();
 				pstmt2.close();
 				pstmt.close();
+				rset.close();
 				conn.close();
 			} catch (SQLException e) {
 				System.out.println("오류 발생 : 관리자에게 문의하세요.");
