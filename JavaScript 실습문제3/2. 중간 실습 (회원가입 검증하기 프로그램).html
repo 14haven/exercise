@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        fieldset{
+            width : 350px;
+            height : 200px;
+            border : 1px solid black;
+            margin: 0 50px;
+            float : left;
+        }
+        fieldset>legend{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p><H1>회원가입 검증하기 프로그램 만들기</H1></p>
+    <p><h4>1. ID 입력시 중복확인 버튼을 클릭하면 '회원 목록'에서 확인하여 
+    중복된 ID 사용 불가하도록 구현 (공백도 허용 불가)
+    </h4>
+    <p><h4>2. PW 입력시 비밀번호 검증 버튼을 클릭하면 비밀번호(PW)와 비밀번호확인(PW_re)을 확인하여 동일한 비밀번호를 입력했는지 확인 (공백 허용 불가)
+    </h4>
+    <p><h4>3. 이름 입력시 이름 검증 버튼을 클릭하면 2글자 이상의 이름을 입력하였는지
+    검증 해야 함 (공백 허용 불가) <br>(hint. document.getElementsByClassName(); -> class 이름으로 찾아올수 있음 (배열))
+    </h4>
+    <p><h4>4. 전체 검증하기 버튼 클릭시 자동으로 모든 데이터를 검증 및 확인    
+    </h4>
+    
+    <fieldset id="member">
+        <legend>회원 목록</legend>
+        <p><span class="user-id">user11</span>
+            <span class="user-name">홍길동</span>
+        </p>
+        <p><span class="user-id">user22</span> 
+            <span class="user-name">김말똥</span>
+        </p>
+        <p><span class="user-id">user33</span> 
+            <span class="user-name">고길똥</span>
+        </p>
+        <p><span class="user-id">mslove</span> 
+            <span class="user-name">민수럽</span>
+        </p>
+        <p><span class="user-id">mslike</span> 
+            <span class="user-name">나민수</span>
+        </p>
+    </fieldset>
+    <fieldset id="join">
+        <legend>회원가입</legend>
+        ID : <input type="text" id="userId"/> <button onclick="idCheck();">중복확인</button><br>
+        PW : <input type="password" id="userPwd"/> <br>
+        PW_re : <input type="password" id="userPwd_re"/> <button onclick="pwdCheck();">비밀번호검증</button><br>
+        이름 : <input type="text" id="userName"/> <button onclick="nameCheck();">이름검증</button>
+        <br>
+        <button onclick="allCheck();">전체 검증하기</button>
+    </fieldset>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+      
+    
+    <script>
+        function idCheck(){
+            
+
+        }
+        function pwdCheck(){
+           
+        }
+        function nameCheck(){
+            
+        }
+        function allCheck(){
+           
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
