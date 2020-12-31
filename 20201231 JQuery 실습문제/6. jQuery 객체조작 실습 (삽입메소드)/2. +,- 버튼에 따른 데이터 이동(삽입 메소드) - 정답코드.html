@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+
+    <table border="1px" >
+        <tr id="columnName"><th>번호</th><th>이름</th><th>나이</th><th>주소</th><th>버튼</th></tr>
+        <tr><td class="no">1</td><td>홍길동</td><td>20살</td><td>경기도</td><td><button class="plus">+</button><button class="minus">-</button></td></tr>
+        <tr><td class="no">2</td><td>김말똥</td><td>30살</td><td>서울시</td><td><button class="plus">+</button><button class="minus">-</button></td></tr>
+        <tr><td class="no">3</td><td>고길똥</td><td>40살</td><td>부산시</td><td><button class="plus">+</button><button class="minus">-</button></td></tr>
+        <tr><td class="no">4</td><td>홍김고</td><td>50살</td><td>대구시</td><td><button class="plus">+</button><button class="minus">-</button></td></tr>
+    </table>
+
+
+    <script>
+
+    $(function(){
+        $('.plus').click(function(){
+            //console.log($(this).parents('tr').prev().attr("id")); //상위 id 확인하기
+            if($(this).parents('tr').prev().attr("id")!='columnName'){
+                $(this).parents('tr').insertBefore($(this).parents('tr').prev());    
+            }
+            
+        });
+        
+        $('.minus').click(function(){
+            $(this).parents('tr').insertAfter($(this).parents('tr').next());
+        });
+    });
+</script>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<style>
+    .item{
+        width : 100px;
+        height : 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        float : left; 
+        margin-left: 10px;
+        
+    }
+    </style>
+    
+<div class="item">yellow</div>
+<div class="item">yellow</div>
+<div class="item">yellow</div>
+<div class="item">yellow</div>    
+<br><br><br><br><br><br><br><br>
+<button id="btn">작동</button><br><br>
+    1. 마우스를 올려가면 border 값이 변경 되도록 하여라 (5px solid red) <br>
+            - 마우스가 내려가면 다시 돌아 와야 함<br>
+    2. 마우로 해당 요소를 클릭하면 색상이 변해야 함 (안에 텍스트가 색깔을 의미) <br>
+    3. 작동이라는 버튼을 클릭하면 click 이벤트가 동작하도록 하여라.
+    
+    
+    <script>
+    $(function(){
+        $('.item').hover(function(){
+            $(this).css('border','5px solid red');
+        },function(){
+            $(this).css('border','1px solid black');
+        });
+        
+        $('.item').click(function(){
+            var color = $(this).html();
+            if(color=='yellow'){
+                $(this).css('background-color','darkgrey'); 
+                $(this).html('darkgrey');
+            }else{
+                $(this).css('background-color','yellow');
+                $(this).html('yellow');
+            }            
+        });
+        
+        $('#btn').click(function(){
+            $('.item').trigger('click');
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>

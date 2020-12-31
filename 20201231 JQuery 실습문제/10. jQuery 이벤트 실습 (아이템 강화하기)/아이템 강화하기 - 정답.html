@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</head>
+
+
+
+<body>
+    <script>
+        $(document).ready(function() {
+
+            
+            //강화 관련된 이벤트
+            $(".upgrade").click(function() {
+
+                var weaponLevel = $(this).parent().prev().children('span').text();
+
+                var dice = (10 * 10) - (10 * weaponLevel);
+                var rand = Math.floor(Math.random() * 100 + 1);
+                if (rand <= dice) //랜덤으로 뽑아낸 수가 확률안에 속한다면! 강화성공
+                {
+                    alert("강화 성공");
+                    weaponLevel++;
+                    $(this).parent().prev().children('span').text(weaponLevel);
+                    $(this).parent().prev().children('span').css('color', 'blue');
+                } else { //속하지 않는다면 강화 실패
+                    alert("강화 실패");
+                    weaponLevel--;
+                    $(this).parent().prev().children('span').text(weaponLevel);
+                    $(this).parent().prev().children('span').css('color', 'red');
+                }
+
+            });
+
+
+            //상태(락) 관련된 이벤트
+            $(".lock").click(function() {
+
+                //강화버튼에 있는 lock 속성값 가져오기 
+                var lock = $(this).parent().prev().children('button').attr('lock');
+
+
+                // (저장된 값은 String 타입)
+                if (lock == "true") {
+
+                    $(this).text('해제');
+                    lock = false;
+                    $(this).parent().prev().children('button').removeAttr('disabled');
+
+                } else {
+
+                    $(this).text('잠김');
+                    lock = true;
+                    $(this).parent().prev().children('button').attr('disabled','true');
+                }
+                $(this).parent().prev().children('button').attr('lock', lock);
+
+            });
+
+            
+            //링크 관련된 이벤트
+            $('.link').click(function() {
+                var status = $(this).parent().next().next().next().children('button').attr('lock');
+                if (status == "true") {
+                    event.preventDefault();
+                    alert("현재 잠김 상태 입니다.");
+                }
+
+            });
+
+
+        });
+
+    </script>
+<h1> 고난이도 실습 </h1>
+<h4 style="color:red;">id로 접근하는것이 아니라서 어려운 문제 입니다.</h4>
+    <table border="1px" style="text-Align:center;">
+        <tr>
+            <th>사진</th>
+            <th>무기이름</th>
+            <th>무기설명</th>
+            <th>무기강화도</th>
+            <th>강화</th>
+            <th>상태</th>
+        </tr>
+        <tr>
+            <td><img src="./image/백화검.gif" style="width : 100%; height : 100%;" /></td>
+            <td><a class="link" href="http://goeyu.com/baramdb/items1.php?search_name=1&search_word=%B9%E9%C8%AD%B0%CB">백화검</a></td>
+            <td>불타는 검신으로 무엇이든 태운다는 명검</td>
+            <td>+<span class="weapon">6</span></td>
+            <td><button class="upgrade" lock="true" disabled>강화</button></td>
+            <td><button class="lock">잠김</button></td>
+        </tr>
+
+        <tr>
+            <td><img src="./image/진백화검.gif" style="width : 100%; height : 100%;" /></td>
+            <td><a class="link" href="http://goeyu.com/baramdb/items1.php?search_name=1&search_word=%B9%E9%C8%AD%B0%CB">진백화검</a></td>
+            <td>한층 더 강하게 타오르는 백화검</td>
+            <td>+<span class="weapon">2</span></td>
+            <td><button class="upgrade" lock="true" disabled>강화</button></td>
+            <td><button class="lock">잠김</button></td>
+        </tr>
+
+        <tr>
+            <td><img src="./image/일월대도.gif" style="width : 100%; height : 100%;" /></td>
+            <td><a class="link" href="http://goeyu.com/baramdb/items1.php?search_name=1&search_word=%C0%CF%BF%F9%B4%EB%B5%B5">일월대도</a></td>
+            <td>대낮에 희미하게 보이는 달의 모습을 본따 만들어진 대도</td>
+            <td>+<span class="weapon">1</span></td>
+            <td><button class="upgrade" lock="true" disabled>강화</button></td>
+            <td><button class="lock">잠김</button></td>
+        </tr>
+
+    </table>
+    <br>
+    <h3>1. 강화 버튼을 클릭하면 확률로 무기가 강화 되어야 함 <br> (+0일때에는 100% +1일때에는 90% +2일때에는 80% ... +9일때에는 10% 확률 / +10이 최강)</h3>
+    <h3>2. 상태 버튼이 잠김 상태일때에는 강화 버튼이 사용할 수 없어야 함 <br> (해제 상태일때에는 사용할 수 있음)<br>
+        (hint. button의 속성중 lock 속성과 disabled 속성(부여하기)을 활용하세요 / 속성 부여하기 attr('disabled','true'); / 삭제하기 removeAttr('disabled');  )
+    </h3>
+    <h3>3. 무기 이름을 클릭하면 네이버 검색으로 무기를 검색하게 되는데, 잠김 상태에서는 해당 이벤트를 해제 하여라<br>
+        (a 태그 이벤트 해제 / event.preventDefault() 활용) </h3>
+
+
+
+</body>
+
+</html>

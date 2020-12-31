@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <style>
+        .quiz {
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            $('#btn1').click(function() {
+                //$("#quiz1>p>.an").first().css('color', 'red');
+                $("#quiz1").children('p').children('.an').first().css('color','red');
+                
+                //$("#quiz1>p>.sp").last().css('color', 'blue');
+                
+                $("#quiz1").children('p').children('.sp').last().css('color', 'blue');
+                
+            });
+
+            $('#btn2').click(function() {
+               $('#quiz2>div>span').not('.sp').css('color','red');
+            });
+
+            $('#btn3').click(function() {
+                $('#quiz3>table tr').find('td').css('background-color','skyblue');
+            });
+
+            $('#btn4').click(function() {
+                $('.data').eq(2).css('color','blue');
+            });
+
+            $('#ageBtn1').click(function() {
+                var data = $('#ageBtn1').parent().prev().prev().html();
+                data++;
+                $('#ageBtn1').parent().prev().prev().html(data);
+            });
+             $('#ageBtn2').click(function() {
+                var data = $('#ageBtn2').parent().prev().prev().html();
+                data++;
+                $('#ageBtn2').parent().prev().prev().html(data);
+            });
+             $('#ageBtn3').click(function() {
+                var data = $('#ageBtn3').parent().prev().prev().html();
+                data++;
+                $('#ageBtn3').parent().prev().prev().html(data);
+            });
+             $('#ageBtn4').click(function() {
+                var data = $('#ageBtn4').parent().prev().prev().html();
+                data++;
+                $('#ageBtn4').parent().prev().prev().html(data);
+            });
+             $('#ageBtn5').click(function() {
+                var data = $('#ageBtn5').parent().prev().prev().html();
+                data++;
+                $('#ageBtn5').parent().prev().prev().html(data);
+            });
+            
+            
+            $('.ageBtn').click(function() {
+                var data =  $(this).parent().prev().prev().html();
+                data++;
+                $(this).parent().prev().prev().html(data);
+            });
+        });
+    </script>
+
+    Quiz1. quiz1 ID를 이용하여 딸기와 당근을 선택하여라.
+    (조건. first(), last() 함수는 필수 사용)
+    <div class="quiz" id="quiz1">
+        <p>
+            <span class="sp">사과</span><br>
+            <span class="an">딸기</span><br>
+            <span class="sp">배</span><br>
+        </p>
+        <p>
+            <span class="an">포도</span><br>
+            <span class="sp">당근</span><br>
+            <span class="an">귤</span><br>
+        </p>
+    </div>
+    <button id="btn1">결과</button>
+    <hr>
+    Quiz2. quiz2 ID를 이용하여 딸기와 귤을 선택하여라.
+    (조건 not() 함수는 필수 사용)
+    <div class="quiz" id="quiz2">
+        <div>
+            <li>
+            <span class="sp">사과</span><br>
+            </li>
+            <span class="an">딸기</span><br>
+            <span class="sp">배</span><br>
+        </div>
+        <div>
+            <li>
+            <span class="an">포도</span><br>
+            </li>
+            <span class="sp">당근</span><br>
+            <span class="an">귤</span><br>
+        </div>
+    </div>
+    <button id="btn2">결과</button>
+    <hr>
+    Quiz3. quiz3 ID를 사용하여 데이터만 선택하여라.
+    (단, find() 함수 필수 사용)
+    <div class="quiz" id="quiz3"> 
+        <table border="1px">
+            <tr><th>이름</th><th>나이</th><th>주소</th></tr>
+            <tr><td>홍길동</td><td>20살</td><td>경기도</td></tr>
+            <tr><td>김말똥</td><td>30살</td><td>서울시</td></tr>
+            <tr><td>고길똥</td><td>40살</td><td>부산시</td></tr>
+            <tr><td>김홍고</td><td>50살</td><td>광주시</td></tr>
+            <tr><td>김말기</td><td>60살</td><td>포항시</td></tr>
+        </table>
+    
+    </div>
+    <button id="btn3">결과</button>
+    <hr>
+    Quiz4. data class를 사용하여 고길똥 라인을 선택하여라.
+    <div class="quiz" id="quiz4"> 
+        <table border="1px">
+            <tr><th>이름</th><th>나이</th><th>주소</th></tr>
+            <tr class="data"><td>홍길동</td><td>20살</td><td>경기도</td></tr>
+            <tr class="data"><td>김말똥</td><td>30살</td><td>서울시</td></tr>
+            <tr class="data"><td>고길똥</td><td>40살</td><td>부산시</td></tr>
+            <tr class="data"><td>김홍고</td><td>50살</td><td>광주시</td></tr>
+            <tr class="data"><td>김말기</td><td>60살</td><td>포항시</td></tr>
+        </table>
+    </div>
+    <button id="btn4">결과</button>
+    <hr>
+    Quiz5. + 버튼을 클릭하면 해당 나이를 1씩 증가시켜라.(함수는 5개 만들어야 함)<br>
+   
+    <div class="quiz" id="quiz5"> 
+        <table border="1px">
+            <tr><th>이름</th><th>나이</th><th>주소</th><th>age</th></tr>
+            <tr><td>홍길동</td><td>20</td><td>경기도</td><td><button id="ageBtn1">+</button></td></tr>
+            <tr><td>김말똥</td><td>30</td><td>서울시</td><td><button id="ageBtn2">+</button></td></tr>
+            <tr><td>고길똥</td><td>40</td><td>부산시</td><td><button id="ageBtn3">+</button></td></tr>
+            <tr><td>김홍고</td><td>50</td><td>광주시</td><td><button id="ageBtn4">+</button></td></tr>
+            <tr><td>김말기</td><td>60</td><td>포항시</td><td><button id="ageBtn5">+</button></td></tr>
+        </table>
+    </div>
+    
+    <hr>
+    Quiz6. + 버튼을 클릭하면 해당 나이를 1씩 증가시켜라.(함수는 1개 만들어야 함)<br>
+    (hint. 선택자에서 this를 활용하면?)
+    <div class="quiz" id="quiz6"> 
+        <table border="1px">
+            <tr><th>이름</th><th>나이</th><th>주소</th><th>age</th></tr>
+            <tr><td>홍길동</td><td>20</td><td>경기도</td><td><button class="ageBtn">+</button></td></tr>
+            <tr><td>김말똥</td><td>30</td><td>서울시</td><td><button class="ageBtn">+</button></td></tr>
+            <tr><td>고길똥</td><td>40</td><td>부산시</td><td><button class="ageBtn">+</button></td></tr>
+            <tr><td>김홍고</td><td>50</td><td>광주시</td><td><button class="ageBtn">+</button></td></tr>
+            <tr><td>김말기</td><td>60</td><td>포항시</td><td><button class="ageBtn">+</button></td></tr>
+        </table>
+    </div>
+    
+    <hr>
+
+
+
+
+</body></html>
+    
+    
+    
+    
+    
+    

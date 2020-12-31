@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+
+<div>
+    
+    업로드할 파일 선택 <input type="button" value="+" id="plus" />
+	<input type="button" value="-" id="minus" /><br>
+	<input type="file" />
+	
+</div>
+    
+     <script>
+         $(function(){
+            $('#plus').click(function(){
+                $("input").last().after("<br><input type='file' />");
+            });    
+             
+            $('#minus').click(function(){
+                $("input").last().remove();
+            });    
+             
+         });
+ </script>
+    
+
+
+</body>
+
+</html>

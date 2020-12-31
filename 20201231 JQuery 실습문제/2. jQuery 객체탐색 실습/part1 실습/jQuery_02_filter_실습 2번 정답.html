@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+
+  <script>
+	function selectBtn(){
+	var check = $("option").filter("option:selected");
+				console.log(check.text());
+	}
+  </script>
+  
+<select>
+	<option value="1" selected="selected">1번</option>
+	<option value="2">2번 </option>
+	<option value="3">3번 </option>
+</select>
+<br />
+<input type="button" value="Select 버튼 확인" onclick="selectBtn()" />
+
+
+</body></html>
+    
+    
+    
+    
+    
+    

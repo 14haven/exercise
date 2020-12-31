@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+
+    <style>
+    </style>
+
+    <table border="1px" style="text-align:center">
+
+        <tr>
+            <th>체크</th>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>홍길동</td>
+            <td>20</td>
+            <td>서울시</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>김말똥</td>
+            <td>30</td>
+            <td>경기도</td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>고길똥</td>
+            <td>40</td>
+            <td>강원도</td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" /></td>
+            <td>김지똥</td>
+            <td>50</td>
+            <td>인천광역시</td>
+
+        </tr>
+    </table>
+    <br>
+
+    <label>출력</label>
+    <div style="border:3px solid red; height:200px; width:500px;" id="result">
+
+    </div>
+
+    <button id="btn">출력</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#btn').click(function() {
+                var str="";
+                var object = $('tr');
+                object.each(function(index, item) {
+                    var data = $(item).children();
+    if(index!=0&&data.eq(0).children().is('input:checked'))
+      {
+          str += "이름 : " + data.eq(1).html() + " / " +
+                "나이 : " + data.eq(2).html() + " / " +
+                "주소 : " + data.eq(3).html() + "<br>";
+          
+      }
+            });
+                var result = $('#result');
+                result.html(str);
+            });
+
+    });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

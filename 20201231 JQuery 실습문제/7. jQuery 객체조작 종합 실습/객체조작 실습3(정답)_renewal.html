@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+
+<style>
+    div{
+        border : 2px solid black;
+        width:100px;
+        height:100px;
+        margin: 5px;
+        float: left;
+    }
+</style>
+
+문제3<br>
+다음 2개의 그림 중 선택한 후 복사 될 수 있도록 구현하여라 <br>
+<fieldset style="width:300px; margin:30px">
+<legend>2개의 그림 중 선택하시오.</legend>
+<div id="img1" style="background-color:red;">
+    
+</div>
+<div id="img2" style="background-color:blue;">
+    
+</div>
+</fieldset>
+
+<fieldset style="width:800px;  margin:30px">
+    
+        <legend>복사되는 공간</legend>
+     
+        <div id="1th">
+            
+        </div >
+        <div id="2th">
+            
+        </div>
+        <div id="3th">
+            
+        </div>
+        <div id="4th">
+            
+        </div>
+        <div id="5th">
+            
+        </div>
+        <div id="6th">
+            
+        </div>
+        <div id="7th">
+            
+        </div>
+</fieldset>
+
+    <script>
+      $(function(){
+        var style =""; //기본색
+          
+          $('#img1').click(function(){
+              style = $(this).attr('style'); //값을 가져오면 rgb로 가져오니까! 직접 입력
+          });
+          $('#img2').click(function(){
+              style = $(this).attr('style'); //값을 가져오면 rgb로 가져오니까! 직접 입력
+          });
+          
+          $('fieldset').eq(1).children('div').click(function(){
+            
+              $(this).attr('style',style);
+          })
+
+      });
+
+  </script>
+
+<button id="btn1"> 초기화 </button>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

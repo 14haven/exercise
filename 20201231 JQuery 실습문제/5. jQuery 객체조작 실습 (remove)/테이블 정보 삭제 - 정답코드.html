@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- google에서 jQuery CDN 검색하고 경로 가져오기 -->
+  
+    
+
+    
+    <table border="1px">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+            <th>상태</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>20살</td>
+            <td>경기도</td>
+            <td><button class="delBtn">삭제</button></td>
+        </tr>
+        <tr>
+            <td>김말똥</td>
+            <td>30살</td>
+            <td>서울시</td>
+            <td><button class="delBtn">삭제</button></td>
+        </tr>
+        <tr>
+            <td>고길똥</td>
+            <td>40살</td>
+            <td>부산시</td>
+            <td><button class="delBtn">삭제</button></td>
+        </tr>
+        <tr><td colspan="4"><button id="allDelBtn" style="width:100%;">전체 삭제</button></td></tr>
+    </table>
+    <br><br><br>
+    1. 삭제 버튼을 클릭하면 해당 행을 삭제 하여라. <br>
+    2. 전체 삭제 버튼을 클릭하면 테이블 자체를 삭제 하여라. <br>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        $(function() {
+            $('.delBtn').click(function() {
+                $(this).parent().parent().remove();
+            });
+
+            $('#allDelBtn').click(function() {
+                $(this).parents('table').remove();
+            });
+
+
+        });
+    </script>
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

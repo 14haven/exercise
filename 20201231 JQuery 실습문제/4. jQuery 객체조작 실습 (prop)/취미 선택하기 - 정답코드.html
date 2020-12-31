@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- google에서 jQuery CDN 검색하고 경로 가져오기 -->
+  
+    
+    취미<br>
+    <input type="checkbox" name="hobby" value="독서"/><span>독서</span>
+    <input type="checkbox" name="hobby" value="운동"/><span>운동</span>
+    <input type="checkbox" name="hobby" value="댄스"/><span>댄스</span><br>
+    <input type="checkbox" name="hobby" value="노래"/><span>노래</span>
+    <input type="checkbox" name="hobby" value="등산"/><span>등산</span>
+    <input type="checkbox" name="hobby" value="기타"/><span>기타</span><br>
+
+    <input type="checkbox" id="all"/>전체선택
+    
+    <br><br><br><br>
+    1. 해당 취미를 체크하면 글씨가 파란색으로 표시 되어야 함 (체크상태일땐 파란색/해체상태일때는 검정색)<br>
+    2. 전체선택을 체크하면 모든 취미가 (전체선택 제외) 체크되고, 파란색으로 표시되어야 함 <br>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+    $(function(){
+        $('input[name=hobby]').click(function(){
+            if($(this).prop("checked")){
+                $(this).next().css('color','blue');    
+            }else{
+                $(this).next().css('color','black');
+            }
+        });
+        
+        $('#all').click(function(){
+            if($(this).prop("checked")){
+                $('input[name=hobby]').next().css('color','blue');
+                $('input[name=hobby]').prop("checked",true);
+            }
+            else{
+                $('input[name=hobby]').next().css('color','black');
+                $('input[name=hobby]').prop("checked",false);
+            }
+        });
+        
+
+    });
+</script>
+    
+
+
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
